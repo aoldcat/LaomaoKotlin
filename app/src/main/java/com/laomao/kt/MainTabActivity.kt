@@ -3,10 +3,16 @@ package com.laomao.kt
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
+import android.widget.Toast
+import com.laomao.kt.base.BaseActivity
+import com.laomao.kt.utils.extFun
+import com.laomao.kt.utils.showToast
+import com.laomao.ktlib.*
 
-class MainTabActivity : AppCompatActivity() {
+class MainTabActivity : BaseActivity() {
 
     private var mTextMessage: TextView? = null
 
@@ -32,9 +38,14 @@ class MainTabActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_tab)
 
-        mTextMessage = findViewById(R.id.message) as TextView
+//        mTextMessage = findViewById(R.id.message) as TextView
+        mTextMessage=findview<TextView>(R.id.message)
         val navigation = findViewById(R.id.navigation) as BottomNavigationView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        showToast(extFun("laomao"))
+        loge("log error")
+        logwtf("wtf")
+        logi { "test info" }
     }
 
 }
