@@ -36,7 +36,7 @@ fun Any.logd(msg: () -> String) {
     if (Log.isLoggable(logTag, Log.DEBUG)) logd(msg())
 }
 
-fun Any.logve(msg: () -> String) {
+fun Any.loge(msg: () -> String) {
     if (Log.isLoggable(logTag, Log.ERROR)) loge(msg())
 }
 
