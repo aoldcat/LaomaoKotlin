@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.laomao.kt.base.BaseActivity
 import com.laomao.kt.utils.extFun
 import com.laomao.kt.utils.showToast
-import com.laomao.ktlib.*
+import kotlinx.android.synthetic.main.activity_main_tab.*
 
 class MainTabActivity : BaseActivity() {
 
@@ -38,14 +38,11 @@ class MainTabActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_tab)
 
-//        mTextMessage = findViewById(R.id.message) as TextView
-        mTextMessage=findview<TextView>(R.id.message)
+        mTextMessage = findViewById(R.id.message) as TextView
         val navigation = findViewById(R.id.navigation) as BottomNavigationView
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        showToast(extFun("laomao"))
-        loge("log error")
-        logwtf("wtf")
-        logi { "test info" }
+
+        tvLaomao.text="laomao change"
     }
 
 }
