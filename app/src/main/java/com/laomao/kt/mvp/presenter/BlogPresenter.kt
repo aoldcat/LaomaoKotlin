@@ -1,5 +1,7 @@
 package com.laomao.kt.mvp.presenter
 
+import android.util.Log
+import com.laomao.kt.bean.Blog
 import com.laomao.kt.mvp.contract.BlogContract
 import com.laomao.kt.mvp.model.BlogModel
 import rx.android.schedulers.AndroidSchedulers
@@ -14,8 +16,10 @@ class BlogPresenter
         addSubscription(mModel.getBlog().observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     res ->
-                    if (!res.error)
-                        mView.onBlog(res.result)
-                }, {}))
+//                    if (!res.error)
+                        mView.onBlog(res.results)
+                }, {
+                   e->Log.e("error",e.message)
+                }))
     }
 }

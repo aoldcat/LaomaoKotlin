@@ -2,6 +2,7 @@ package com.laomao.kt.api
 
 import com.laomao.kt.bean.Blog
 import com.laomao.kt.bean.JsonResult
+import com.laomao.kt.bean.LeanResult
 import retrofit2.http.GET
 import rx.Observable
 
@@ -11,5 +12,5 @@ import rx.Observable
 interface LaomaoApi {
     //1111
     @GET("classes/blogs")
-    fun getBlog():Observable<JsonResult<List<Blog>>>
+    fun getBlog():Observable<LeanResult<List<Blog>>>
 }

@@ -17,7 +17,8 @@ import javax.inject.Inject
 class LauncherActivity : BaseActivity(), BlogContract.View {
     @Inject lateinit var mPresenter: BlogPresenter
     override fun onBlog(listBlog: List<Blog>) {
-        showToast(listBlog.toString())
+//        showToast(listBlog.toString())
+        tvLauncherMsg.text=listBlog.toString()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
