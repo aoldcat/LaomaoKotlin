@@ -25,7 +25,7 @@ class LauncherActivity : BaseActivity(), BlogContract.View {
         setContentView(R.layout.activity_launcher)
         getMainComponent().plus(BlogModule(this)).inject(this)
         tvLauncherMsg.text = "我是闪屏文字"
-//        mPresenter.getBlog()
+        mPresenter.getBlog()
 
 
     }
