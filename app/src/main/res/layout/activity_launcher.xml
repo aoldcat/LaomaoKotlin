@@ -4,12 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.laomao.kt.ui.activity.LauncherActivity">
+    tools:context="com.laomao.kt.ui.activity.LauncherActivity"
+    android:orientation="vertical">
     <TextView
+        android:visibility="gone"
         android:id="@+id/tvLauncherMsg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         />
+    <com.laomao.ktlib.LMMyEdittext
+        android:id="@+id/myEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.laomao.ktlib.LMMyEdittext>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="left"/>
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"/>
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+    </LinearLayout>
+
 
 </LinearLayout>
